@@ -1,6 +1,6 @@
 module.exports = (x, y, callback) => {
     if (x <= 0 || y <= 0) {
-        callback(new Error(`Rectangle dimensions must be greater than zero. Logged values: ${x} length and ${y} width`))
+        callback(new Error(`Rectangle dimensions must be greater than zero. Received: ${x}, ${y}`));
     } else {
         setTimeout(() =>
             callback(null, {
@@ -8,6 +8,6 @@ module.exports = (x, y, callback) => {
                 area: () => x * y
             }),
             2000
-        )
+        );
     }
-}
+};
